@@ -39,8 +39,8 @@ end
  end
 
  def start_with_caps(journalists)
-   journalists1 = journalists.tr("@", "")
-   capss = journalists1.select{|journalists1| journalists1.start_with? "A"}
+
+   capss = journalists.select{|journalists| journalists[1] == "A"}
    caps = capss.count
    puts "Il y a #{caps} handles qui commencent par une majuscule."
    print ">"
